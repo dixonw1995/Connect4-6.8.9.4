@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="fill_parent"
+                style="@style/LabelText"
+                android:text="@string/settingText"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:fontFamily="casual"
+                android:paddingTop="20dp"
+                android:textStyle="normal|bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:textAllCaps="true"
+                android:typeface="serif" />
+
+            <RadioGroup
+                android:id="@+id/radio_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <RadioButton
+                    android:id="@+id/radio_sound0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyRadio"
+                    android:text="Sound on"
+                    android:checked="true"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_sound1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyRadio"
+                    android:text="Sound off"
+                    android:textSize="24sp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonConfirm"
+                android:text="Confirm"
+                android:textColor="#ff2929c5"
+                android:textSize="24sp"
+                android:layout_height="70dp"
+                android:fontFamily="casual"
+                android:layout_gravity="right"
+                android:layout_marginRight="20px"
+                android:layout_width="158dp"
+                android:textStyle="normal|bold"
+                android:textAllCaps="false"
+                android:layout_weight="0.21" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
