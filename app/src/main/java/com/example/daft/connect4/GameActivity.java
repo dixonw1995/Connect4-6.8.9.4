@@ -69,12 +69,7 @@ public class GameActivity extends AppCompatActivity {
                     resumeGame();
                 }
             });
-            resumeDialog.setNegativeButton("NO", new DialogInterface.OnClickListener(){
-
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            });
+            resumeDialog.setNegativeButton("NO", null);
             resumeDialog.show();
         }
 
@@ -223,7 +218,6 @@ public class GameActivity extends AppCompatActivity {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO Auto-generated method stub
                 finish();
             }});
 

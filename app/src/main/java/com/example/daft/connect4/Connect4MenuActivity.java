@@ -5,31 +5,23 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import java.io.File;
-
 
 /**
  * Created by shukfunwong on 4/12/2016.
  */
 
 public class Connect4MenuActivity extends Activity{
-    private Button buttonPlay;
-    private Button buttonSettings;
-    private Button buttonHelp;
 
     /** Called when the activity is first created. */
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.mainmenu);
-            buttonPlay = (Button)findViewById(R.id.button1);
-            buttonSettings = (Button)findViewById(R.id.button2);
-            buttonHelp = (Button)findViewById(R.id.button3);
+            Button buttonPlay = (Button) findViewById(R.id.button1);
+            Button buttonSettings = (Button) findViewById(R.id.button2);
+            Button buttonHelp = (Button) findViewById(R.id.button3);
 
             buttonPlay.setOnClickListener(new Button.OnClickListener(){
                 @Override
@@ -65,17 +57,10 @@ public class Connect4MenuActivity extends Activity{
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO Auto-generated method stub
                 finish();
             }});
 
-        quitDialog.setNegativeButton("NO", new DialogInterface.OnClickListener(){
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // TODO Auto-generated method stub
-
-            }});
+        quitDialog.setNegativeButton("NO", null);
 
         quitDialog.show();
     }
