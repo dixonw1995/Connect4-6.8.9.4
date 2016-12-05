@@ -3,4 +3,14 @@
     <string name="settingText">Settings</string>
     <string name="helpText">How to Play</string>
     <string name="helpMsg">Connect Four is a grid of seven columns and six rows. Try to connect four checkers in a straight line, either horizontally, vertically or diagonally. You can keep track of opponent"'"s move and design your moves. The first one to connect four checkers in a line wins.</string>
+    <string name="p1">Player 1</string>
+    <string name="p2">Player 2</string>
+    <string name="column">column</string>
+    <string name="sound_on">Sound on</string>
+    <string name="sound_off">Sound off</string>
+    <string name="confirm">Confirm</string>
+    <string name="back">Back</string>
+    <string name="play">Play</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
 </resources>

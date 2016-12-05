@@ -4,65 +4,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
-
-    android:orientation="vertical"
-    android:baselineAligned="false">
-
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="1200px"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"
-        android:layout_weight="0.55" />
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:gravity="center_vertical|center_horizontal">
 
 
-    <Button
-        android:id="@+id/button1"
-        android:text="Play"
-        android:textColor="#ff2929c5"
-        android:textSize="36sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20px"
-        android:layout_marginLeft="500px"
-        android:layout_marginRight="500px"
-        android:background="@drawable/buttonshape"
-        android:textStyle="normal|bold"
-        android:fontFamily="casual"
-        android:textAllCaps="false" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp">
 
-    <Button
-        android:id="@+id/button2"
-        android:text="Settings"
-        android:textColor="#ff2929c5"
-        android:textSize="36sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50px"
-        android:layout_marginLeft="500px"
-        android:layout_marginRight="500px"
-        android:background="@drawable/buttonshape"
-        android:textStyle="normal|bold"
-        android:fontFamily="casual"
-        android:textAllCaps="false" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"
+            android:layout_weight="300"
+            android:adjustViewBounds="false"
+            android:layout_margin="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="300dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:text="Help"
-        android:textColor="#ff2929c5"
-        android:textSize="36sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50px"
-        android:layout_marginLeft="500px"
-        android:layout_marginRight="500px"
-        android:background="@drawable/buttonshape"
-        android:textStyle="normal|bold"
-        android:fontFamily="casual"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/button1"
+            android:text="@string/play"
+            android:textColor="#ff2929c5"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textStyle="normal|bold"
+            android:fontFamily="casual"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:text="@string/settings"
+            android:textColor="#ff2929c5"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textStyle="normal|bold"
+            android:fontFamily="casual"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:text="@string/help"
+            android:textColor="#ff2929c5"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:textStyle="normal|bold"
+            android:fontFamily="casual"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+    </LinearLayout>
 
 
 </LinearLayout>
