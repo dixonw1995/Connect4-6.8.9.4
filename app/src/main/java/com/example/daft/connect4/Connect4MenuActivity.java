@@ -20,6 +20,7 @@ public class Connect4MenuActivity extends Activity{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.mainmenu);
             Button buttonPlay = (Button) findViewById(R.id.button1);
+            Button buttonPlayAI = (Button) findViewById(R.id.button4);
             Button buttonSettings = (Button) findViewById(R.id.button2);
             Button buttonHelp = (Button) findViewById(R.id.button3);
 
@@ -27,6 +28,14 @@ public class Connect4MenuActivity extends Activity{
                 @Override
                 public void onClick(View v) {
                     Intent myIntent = new Intent(v.getContext(), GameActivity.class);
+                    startActivityForResult(myIntent, 0);
+                }
+            });
+
+            buttonPlayAI.setOnClickListener(new Button.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    Intent myIntent = new Intent(v.getContext(), AIGameActivity.class);
                     startActivityForResult(myIntent, 0);
                 }
             });

@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Document;
@@ -37,8 +38,9 @@ public class GameActivity extends AppCompatActivity {
     private List<ImageView> columns;
     private List<LinearLayout> colContainers;
     private TextView[] pv;
+    private TextView pause;
     private MediaPlayer mediaPlayer;
-    public static boolean isSoundOff=false;
+    public static boolean isSoundOff=true;
     private String record;
     private static final String LOG = "Game UI";
     private boolean save = true;
@@ -91,6 +93,8 @@ public class GameActivity extends AppCompatActivity {
         colContainers.add((LinearLayout) findViewById(R.id.contain5));
         colContainers.add((LinearLayout) findViewById(R.id.contain6));
 
+        pause = (TextView) findViewById(R.id.pause);
+
         pv = new TextView[] { (TextView) findViewById(R.id.p1),
                 (TextView) findViewById(R.id.p2) };
 
@@ -98,46 +102,7 @@ public class GameActivity extends AppCompatActivity {
             col.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    byte col = (byte) columns.indexOf(view);
-                    if (game.put(game.currentPlayer(), col)) {
-                        Log.i(LOG, String.format("User puts a disc on column%d", col));
-                        putDisc(col);
-                        byte result = game.judge();
-                        //dialog telling result and asking users play again
-                        AlertDialog.Builder endDialog = new AlertDialog.Builder(GameActivity.this)
-                                .setPositiveButton("Restart", new DialogInterface.OnClickListener(){
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        recreate();
-                                    }
-                                })
-                                .setNegativeButton("Quit", new DialogInterface.OnClickListener(){
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        finish();
-                                    }
-                                });
-                        switch(result) {
-                            case Connect4Game.DRAW:
-                                Log.i(LOG, "Deleting record");
-                                new File(record).delete();
-                                save = false;
-                                endDialog.setTitle("Draw")
-                                        .setMessage("Play again")
-                                        .show();
-                                break;
-                            case Connect4Game.NEXT:
-                                break;
-                            default: //someone wins
-                                Log.i(LOG, "Deleting record");
-                                new File(record).delete();
-                                save = false;
-                                int winner = players.indexOf(result);
-                                endDialog.setTitle("Congratulation")
-                                        .setMessage(String.format("Player %d Wins", winner+1))
-                                        .show();
-                        }
-                    }
+                    play(view);
                 }
             });
         }
@@ -170,6 +135,60 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    public void play(View view) {
+        byte col = (byte) columns.indexOf(view);
+        play(col);
+    }
+    public void play(byte col) {
+        pause.setVisibility(View.VISIBLE);
+        if (game.put(game.currentPlayer(), col)) {
+            Log.i(LOG, String.format("User puts a disc on column%d", col));
+            putDisc(col);
+            byte result = game.judge();
+            //dialog telling result and asking users play again
+            AlertDialog.Builder endDialog = new AlertDialog.Builder(this)
+                    .setPositiveButton("Restart", new DialogInterface.OnClickListener(){
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            recreate();
+                        }
+                    })
+                    .setNegativeButton("Quit", new DialogInterface.OnClickListener(){
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+            endDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    finish();
+                }
+            });
+            switch(result) {
+                case Connect4Game.DRAW:
+                    Log.i(LOG, "Deleting record");
+                    new File(record).delete();
+                    save = false;
+                    endDialog.setTitle("Draw")
+                            .setMessage("Play again")
+                            .show();
+                    break;
+                case Connect4Game.NEXT:
+                    break;
+                default: //someone wins
+                    Log.i(LOG, "Deleting record");
+                    new File(record).delete();
+                    save = false;
+                    int winner = players.indexOf(result);
+                    endDialog.setTitle("Congratulation")
+                            .setMessage(String.format("Player %d Wins", winner+1))
+                            .show();
+            }
+        }
+        pause.setVisibility(View.INVISIBLE);
+    }
+
     public void putDisc(byte col) {
         Log.i(LOG, String.format("Disc falls at column%d", col));
         playSound();
@@ -196,7 +215,7 @@ public class GameActivity extends AppCompatActivity {
 
     public void playSound(){
         if(mediaPlayer==null) {
-            mediaPlayer = MediaPlayer.create(GameActivity.this, R.raw.coin);
+            mediaPlayer = MediaPlayer.create(this, R.raw.coin);
             if(isSoundOff){
                 mediaPlayer.setVolume(0.0f,0.0f);
             }
@@ -211,7 +230,7 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder quitDialog = new AlertDialog.Builder(GameActivity.this);
+        AlertDialog.Builder quitDialog = new AlertDialog.Builder(this);
         quitDialog.setTitle("Are you sure to quit the game?");
 
         quitDialog.setPositiveButton("YES", new DialogInterface.OnClickListener(){

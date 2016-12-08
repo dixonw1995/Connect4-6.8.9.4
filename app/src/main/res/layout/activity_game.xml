@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="2"
+        android:id="@+id/board"
         android:gravity="center">
 
         <LinearLayout
@@ -129,9 +130,7 @@
             android:layout_height="match_parent"
             android:id="@+id/contain6"
             android:layout_toRightOf="@id/col5"
-            android:gravity="bottom">
-
-        </LinearLayout>
+            android:gravity="bottom" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -141,6 +140,21 @@
             android:layout_toRightOf="@id/col5"
             android:adjustViewBounds="true"
             android:contentDescription="@string/column" />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:id="@+id/pause"
+            android:text="@string/pause"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_alignLeft="@+id/contain0"
+            android:layout_alignStart="@+id/contain0"
+            android:layout_alignRight="@+id/col6"
+            android:layout_alignEnd="@+id/col6"
+            android:visibility="invisible"
+            android:fontFamily="casual"
+            android:textSize="36sp"
+            android:layout_width="0dp" />
 
     </RelativeLayout>
 

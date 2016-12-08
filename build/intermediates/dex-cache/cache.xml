@@ -3,6 +3,24 @@
 
     <item
         is-multidex="true"
+        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_d02c4b933bc1e68b3192c4c06292f7c2a03fed89\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_29dded2c739ef4669cbb730dd63ac9e49efd5115\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -30,66 +48,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_592a83466acbe842aba757da53c152864c95e3a8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_47934ce2a07d7c7e265d45cd244784d808e826a0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_8997e7716efdcf24edf0047f33e842e435b92bf0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_e99413deaf06831dbee873da032f9fed087f808d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_d02c4b933bc1e68b3192c4c06292f7c2a03fed89\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_29dded2c739ef4669cbb730dd63ac9e49efd5115\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_dde87434056b0ebc2122865f3cab3315b2477304\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_592a83466acbe842aba757da53c152864c95e3a8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,12 +84,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_8997e7716efdcf24edf0047f33e842e435b92bf0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_47934ce2a07d7c7e265d45cd244784d808e826a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_805ccf4f7faf882c30a081459d990026eda008a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_e99413deaf06831dbee873da032f9fed087f808d\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="ac7e422839aad4a6afa3e1759ee8f4972938b3ad">
+        sha1="41a6c7148a39f06fbaa959c05c7fadcf201af282">
         <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d79983a2d4764f250c53794ea7daea69a89c1817\classes.dex" />
     </item>
     <item
@@ -151,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="0337be82365b2c17ff97590d2315a873b4928ed0">
+        sha1="4e6adbc5ff42837aa78b9e9a60d31dc2d141f828">
         <dex dex="D:\dixon\Documents\ASProject\Connect4\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4e07722f5f8a22b048581d7650a193e27b86e936\classes.dex" />
     </item>
 
